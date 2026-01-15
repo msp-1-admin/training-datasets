@@ -35,8 +35,10 @@ training-datasets/
 ## Dataset Versioning
 
 - Dataset versions are immutable once published.
-- Any modification requires a new version directory (e.g. `v1.1`, `v2.0`).
-- Checksums must match exactly for a dataset version to be considered valid.
+- Any change requires a new version directory (e.g. `v1.1`, `v2.0`).
+- Existing version contents MUST NOT be modified.
+- Integrity is verified via the accompanying `CHECKSUMS.sha256` file.
+
 
 ## Integrity Verification
 
@@ -46,4 +48,4 @@ Consumers are expected to verify checksums before use to ensure dataset integrit
 
 ## License
 
-All datasets and tooling in this repository are released under the MIT License unless otherwise noted.
+All datasets and tooling in this repository are released under the Apache License, Version 2.0, unless otherwise noted.
