@@ -16,6 +16,15 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Debug - show expected files
+        run: |
+          pwd
+          ls -la
+          ls -la tools
+          ls -la datasets
+          ls -la datasets/baseline
+          ls -la datasets/baseline/v1.0
+
       - name: Verify dataset checksums
         run: python tools/verify_checksums.py datasets/baseline/v1.0/CHECKSUMS.sha256
 
