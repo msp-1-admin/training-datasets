@@ -1,0 +1,51 @@
+{
+  "dataset_name": "MSP-1 Protocol Training Datasets (Baseline)",
+  "version": "1.0",
+  "created_date": "2026-01-15",
+  "protocol_name": "MSP-1 (Mark Semantic Protocol)",
+  "protocol_version": "1.0.x",
+  "description": "Foundational, model-agnostic training datasets for explicit MSP-1 protocol understanding, including deterministic generation/validation behaviors and safe refusal patterns when required inputs are missing.",
+  "artifacts": [
+    {
+      "filename": "msp1_protocol_behavior_baseline.jsonl",
+      "entries": 62
+    },
+    {
+      "filename": "msp1_protocol_validation_subset.jsonl",
+      "entries": 35
+    },
+    {
+      "filename": "dataset_metadata.json"
+    },
+    {
+      "filename": "CHECKSUMS.sha256"
+    }
+  ],
+  "format": {
+    "type": "JSONL",
+    "encoding": "UTF-8",
+    "fields": [
+      "id",
+      "role",
+      "task",
+      "input",
+      "expected_behavior",
+      "output",
+      "rules_invoked",
+      "source_refs",
+      "difficulty"
+    ]
+  },
+  "notes": [
+    "Baseline is intentionally model-agnostic and avoids persona or vendor-specific phrasing.",
+    "Datasets teach MSP-1 protocol literacy and deterministic behavior (including refusal when required inputs are missing).",
+    "Datasets are not a source of live page facts; use MSP-1 metadata and page content for page-specific/time-sensitive information."
+  ],
+  "source_refs": [
+    "https://msp-1.org/spec/",
+    "https://msp-1.org/schema/",
+    "https://msp-1.org/ns/",
+    "https://msp-1.org/docs/"
+  ],
+  "license_reference": "https://msp-1.org/docs/license/"
+}
